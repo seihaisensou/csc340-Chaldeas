@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chaldeas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput { 
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin: auto;
+  display: block;
+}
+
+#roster {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#roster li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; 
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#roster li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -35,39 +74,59 @@
 
 <center><h1>A gallery of F/GO servants.</h1></center>
     
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"><br>
+
 <ul id="roster">
-    <li><p> Tamamo-no-Mae<br>
+    <li><a href="details.html"><p> Tamamo-no-Mae<br>
         Class: Caster<br>
         Species: A lot of people think she's a fox, but as stated by herself, she is more close to a jackal. Foxes are cute though, so she presents herself as one.<br>
         She originates from the timeline of Fate/Extra as one of Hakuno Kishinami's summonable servants.<br>
         "I will always be there for you! Your reliable Shrine Maiden Fox, Caster, has now arrived!"</p>
-<img src="servants/tama.webp" alt="mikon"></li>
-    <li><p>Nero Claudius<br>
+<img src="servants/tama.webp" alt="mikon"></a></li>
+    <li><a><p>Nero Claudius<br>
         Class: Saber<br>
         Species: Human. In some odd cases, however, the demonization of her in history turns her into a Beast of Humanity.<br>
         She originates from the timeline of Fate/Extra as one of Hakuno Kishinami's summonable servants.<br> 
         "Servant Saber. Nero Claudius, I have arrived in response to your call! Umu, you have chosen the right one! You sure know how to tell the difference!"</p>
-<img src="servants/nero.webp" alt="umu"></li>
-    <li><p>Archer<br>
+<img src="servants/nero.webp" alt="umu"></a></li>
+    <li><a><p>Archer<br>
         Class: Archer<br>
         Species: Human.<br>
         He originates from the beginning of the franchise, Fate/Stay Night. For the sake of spoilers, his true idenity will not be exposed. Additonally, he is also summonable as Hakuno Kishinami's servant in Fate/Extra. One of the most mysterious servants.<br>
         "Archer-class Servant. I have been summoned and come at your request."</p>
-<img src="servants/archer.webp" alt="acha"></li>
-    <li><p>Oda Nobunaga<br>
+<img src="servants/archer.webp" alt="acha"></a></li>
+    <li><a><p>Oda Nobunaga<br>
         Class: Avenger<br>
         Species: Human.<br>
         Her origin is quite the strange one. Not being apart of any game, anime or visual novel- she sprouted from a gag manga celebrating Type-Moon around that ran during 2013, Koha-ACE EX. Initially manifesting as an archer, she became an avenger due to GUDAGUDA shenanigans.<br>
         "To think that I'd be an Avenger... Uwahaha! What twisted fate. Very well! Behold the way the Demon king of the Sixth Heaven, Nobunaga lives, and engrave it into your very soul!"</p>
-<img src="servants/nobbu.webp" alt="washija"></li>
-    <li><p>Mash Kyrielight<br>
+<img src="servants/nobbu.webp" alt="washija"></a></li>
+    <li><a><p>Mash Kyrielight<br>
         Class: Shielder<br>
         Species: Human, in a twisted sort of way. When she was born, her attributes were altered as a child so that she could take on the identity of a servant. Thus- she is not truly human in a sense that she would ever be able to live a normal life.<br>
         She originates from Fate/Grand Order, she is the first servant you acquire and the deuteragonist of the game.<br>
         "That which heals all wounds and grudges, our glorious homeland. Manifest yourself, Lord Camelot!"</p>
-<img src="servants/mashu.webp" alt="acha"></li>
+<img src="servants/mashu.webp" alt="acha"></a></li>
 </ul>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("roster");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>
 
