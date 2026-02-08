@@ -11,7 +11,7 @@
     }
 
 #myInput { 
-  background-image: url('/css/searchicon.png');
+  background-image: url('/css/searchicon.png'); /* Code taken from W3 https://www.w3schools.com/howto/howto_js_filter_lists.asp */
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 50%;
@@ -76,7 +76,7 @@
 
 <center><h1>A gallery of F/GO servants.</h1></center>
     
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"><br>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for details.." title="Type details"><br>
 
 <ul id="roster">
     
@@ -89,13 +89,13 @@
         She originates from the timeline of Fate/Extra as one of Hakuno Kishinami's summonable servants.<br>
         "I will always be there for you! Your reliable Shrine Maiden Fox, Caster, has now arrived!"</p>
 <img src="servants/tama.webp" alt="mikon" width="256" height="362"></a></li></div>
-    <div class="col"> <li><a><p>Nero Claudius<br>
+    <div class="col"> <li><a href="details.html"><p>Nero Claudius<br>
         Class: Saber<br>
         Species: Human. In some odd cases, however, the demonization of her in history turns her into a Beast of Humanity.<br>
         She originates from the timeline of Fate/Extra as one of Hakuno Kishinami's summonable servants.<br> 
         "Servant Saber. Nero Claudius, I have arrived in response to your call! Umu, you have chosen the right one! You sure know how to tell the difference!"</p>
 <img src="servants/nero.webp" alt="umu" width="256" height="362"></a></li></div>
-    <div class="col"><li><a><p>Archer (Nameless)<br>
+    <div class="col"><li><a href="details.html"><p>Archer (Nameless)<br>
         Class: Archer<br>
         Species: Human.<br>
         He originates from the beginning of the franchise, Fate/Stay Night. For the sake of spoilers, his true idenity will not be exposed. <br>
@@ -104,7 +104,7 @@
         ...This isn't without reason, however. Archer is just a really smug guy.
         "Archer-class Servant. I have been summoned and come at your request."</p>
 <img src="servants/archer.webp" alt="acha" width="256" height="362"></a></li></div>
-    <div class="col"><li><a><p>Oda Nobunaga<br>
+    <div class="col"><li><a href="details.html"><p>Oda Nobunaga<br>
         Class: Avenger<br>
         Species: Human.<br>
         Her origin is quite the strange one.<br>
@@ -112,7 +112,7 @@
         Initially manifesting as an archer, she became an avenger due to GUDAGUDA shenanigans.<br>
         "To think that I'd be an Avenger... Uwahaha! What twisted fate. Very well! Behold the way the Demon king of the Sixth Heaven, Nobunaga lives, and engrave it into your very soul!"</p>
 <img src="servants/nobbu.webp" alt="washija" width="256" height="362"></a></li></div>
-    <div class="col"><li><a><p>Mash Kyrielight<br>
+    <div class="col"><li><a href="details.html"><p>Mash Kyrielight<br>
         Class: Shielder<br>
         Species: Human, in a twisted sort of way. When she was born, her attributes were altered as a child so that she could take on the identity of a servant. <br>
         Thus- she is not truly human in a sense that she would ever be able to live a normal life.<br>
@@ -136,7 +136,7 @@ function myFunction() {
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("roster");
-    li = ul.getElementsByTagName("li");
+    li = ul.getElementsByTagName("li"); /* Code taken from W3 https://www.w3schools.com/howto/howto_js_filter_lists.asp */
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
