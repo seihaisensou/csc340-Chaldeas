@@ -8,7 +8,7 @@
     <style>
 * {
   box-sizing: border-box;
-}
+    }
 
 #myInput { 
   background-image: url('/css/searchicon.png');
@@ -25,7 +25,7 @@
 
 #roster {
   list-style-type: none;
-  padding: 0;
+  padding:  0;
   margin: 0;
 }
 
@@ -43,6 +43,8 @@
 #roster li a:hover:not(.header) {
   background-color: #eee;
 }
+
+
 </style>
 </head>
 <body>
@@ -77,36 +79,55 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"><br>
 
 <ul id="roster">
-    <li><a href="details.html"><p> Tamamo-no-Mae<br>
+    
+
+<div class="container text-center">
+  <div class="row row-cols-2">
+    <div class="col"><li><a href="details.html"><p> Tamamo-no-Mae<br>
         Class: Caster<br>
         Species: A lot of people think she's a fox, but as stated by herself, she is more close to a jackal. Foxes are cute though, so she presents herself as one.<br>
         She originates from the timeline of Fate/Extra as one of Hakuno Kishinami's summonable servants.<br>
         "I will always be there for you! Your reliable Shrine Maiden Fox, Caster, has now arrived!"</p>
-<img src="servants/tama.webp" alt="mikon" width="256" height="362"></a></li>
-    <li><a><p>Nero Claudius<br>
+<img src="servants/tama.webp" alt="mikon" width="256" height="362"></a></li></div>
+    <div class="col"> <li><a><p>Nero Claudius<br>
         Class: Saber<br>
         Species: Human. In some odd cases, however, the demonization of her in history turns her into a Beast of Humanity.<br>
         She originates from the timeline of Fate/Extra as one of Hakuno Kishinami's summonable servants.<br> 
         "Servant Saber. Nero Claudius, I have arrived in response to your call! Umu, you have chosen the right one! You sure know how to tell the difference!"</p>
-<img src="servants/nero.webp" alt="umu" width="256" height="362"></a></li>
-    <li><a><p>Archer<br>
+<img src="servants/nero.webp" alt="umu" width="256" height="362"></a></li></div>
+    <div class="col"><li><a><p>Archer (Nameless)<br>
         Class: Archer<br>
         Species: Human.<br>
-        He originates from the beginning of the franchise, Fate/Stay Night. For the sake of spoilers, his true idenity will not be exposed. Additonally, he is also summonable as Hakuno Kishinami's servant in Fate/Extra. One of the most mysterious servants.<br>
+        He originates from the beginning of the franchise, Fate/Stay Night. For the sake of spoilers, his true idenity will not be exposed. <br>
+        Additonally, he is also summonable as Hakuno Kishinami's servant in Fate/Extra. One of the most mysterious servants.<br>
+        Funnily enough, whenever Archer is summoned as a servant in any grail war, they always bemoan their luck, exclaiming to themselves "Why did I get such a snarky servant?!"<br>
+        ...This isn't without reason, however. Archer is just a really smug guy.
         "Archer-class Servant. I have been summoned and come at your request."</p>
-<img src="servants/archer.webp" alt="acha" width="256" height="362"></a></li>
-    <li><a><p>Oda Nobunaga<br>
+<img src="servants/archer.webp" alt="acha" width="256" height="362"></a></li></div>
+    <div class="col"><li><a><p>Oda Nobunaga<br>
         Class: Avenger<br>
         Species: Human.<br>
-        Her origin is quite the strange one. Not being apart of any game, anime or visual novel- she sprouted from a gag manga celebrating Type-Moon around that ran during 2013, Koha-ACE EX. Initially manifesting as an archer, she became an avenger due to GUDAGUDA shenanigans.<br>
+        Her origin is quite the strange one.<br>
+         Not being apart of any game, anime or visual novel- she sprouted from a gag manga celebrating Type-Moon around that ran during 2013, Koha-ACE EX.<br>
+        Initially manifesting as an archer, she became an avenger due to GUDAGUDA shenanigans.<br>
         "To think that I'd be an Avenger... Uwahaha! What twisted fate. Very well! Behold the way the Demon king of the Sixth Heaven, Nobunaga lives, and engrave it into your very soul!"</p>
-<img src="servants/nobbu.webp" alt="washija" width="256" height="362"></a></li>
-    <li><a><p>Mash Kyrielight<br>
+<img src="servants/nobbu.webp" alt="washija" width="256" height="362"></a></li></div>
+    <div class="col"><li><a><p>Mash Kyrielight<br>
         Class: Shielder<br>
-        Species: Human, in a twisted sort of way. When she was born, her attributes were altered as a child so that she could take on the identity of a servant. Thus- she is not truly human in a sense that she would ever be able to live a normal life.<br>
+        Species: Human, in a twisted sort of way. When she was born, her attributes were altered as a child so that she could take on the identity of a servant. <br>
+        Thus- she is not truly human in a sense that she would ever be able to live a normal life.<br>
         She originates from Fate/Grand Order, she is the first servant you acquire and the deuteragonist of the game.<br>
         "That which heals all wounds and grudges, our glorious homeland. Manifest yourself, Lord Camelot!"</p>
-<img src="servants/mashu.webp" alt="acha" width="256" height="362"></a></li>
+<img src="servants/mashu.webp" alt="acha" width="256" height="362"></a></li></div>
+  </div>
+</div>
+
+
+    
+   
+    
+    
+    
 </ul>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script>
